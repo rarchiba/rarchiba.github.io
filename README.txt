@@ -4,9 +4,6 @@ Credits:
 	Template: Read Only by HTML5 UP
 			html5up.net | @n33co
 
-	Demo Images:
-		Unsplash (unsplash.com)
-
 	Icons:
 		Font Awesome (fortawesome.github.com/Font-Awesome)
 
