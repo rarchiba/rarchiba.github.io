@@ -1,4 +1,4 @@
-My Research website.
+My CV website.
 
 Credits:
 	Template: Read Only by HTML5 UP
