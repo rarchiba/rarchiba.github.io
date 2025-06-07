@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Robert F. Archibald</strong> PhD</a>
+									<ul class="icons">
+										<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
+										<!-- <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li> -->
+									</ul>
+								</header>
+<html>
+	<head>
+		<title>Grandfather Clock</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+									<section>
+									<!-- <header class="main">
+										<h1></h1>
+									</header> -->
+									<!-- Content -->
+										<h1 id="content">Grandfather Clock</h1>
+										<div class="row">
+											<div class="col-6 col-12-small">
+										<p>In 1975, my grandfather built a grandfather clock that has now made its way into my home.
+
+											Note both the cable sneaking out the bottom of the door going to the raspberry pi, 
+											as well as the framed photo of the clock kit shortly after it was bought by my grandfather
+								
+									    </p>
+										<p>
+										  As is only natural, I decided to use pulsar inspired phase coherent timing in order to tune the clock to the proper frequency.
+										  To time the clock, I have an old webcam hooked into a raspberry pi. Every few minutes, the webcam records two seconds of audio, and `folds` the data at a one second period to get a `pulse profile`.
+										  This `pulse profile` is convolved with a standard profile made from summing a large number of pulses & I measure a phase difference. 
+
+										<p>If you plot these residuals, and error in frequency will show itself as a linear drift -- if the grandfather clock is too slow, each consectutive pulse will be later &
+											later and the phase measurements will drift down the plot (and likewise up for the clock being too fast). </p>
+
+										  When I first started, the clock was approximately 1.3 mHz out of sync! Luckily, by fine tuning the pendulum set screw down to ~1/16ths of a turn,
+										  I was able to get this down to ~a few μHz which seems to be the limit with my current set-up. Pretty good for a few 50 year old pieces of brass!
+										</p>
+																		</div>
+									<span class="image object">
+										<img src="clock.JPG", style="max-width:400px;width:100%", alt="" />
+									</span>
+										<p>
+									      Below, I show the timing residuals of the clock after fine tuning in reference to the  <a href="https://nrc.canada.ca/en/web-clock/"><i>National Research Council of Canada's official clock</i></a>.
+										  The data here is ~live -- being pushed here every 30 minutes.
+										  </p>
+										<span class="image object">
+										<img src="grandfather_residuals.png", style="max-width:1200px;width:100%", alt="" />
+										</p>
+										</section>
+									    </span>
+										</div>
+											<!-- Banner -->
+									<p>
+									The small plaque inside the clock indicating the year it was built
+									</p>
+										<span class="image object">
+										<img src="plaque.JPG", style="max-width:400px;width:100%", alt="" />
+									
+									</div>
+				
+								</section>
+<!-- <section id="CV">
+	<div class="container">
+		<h2>Resume</h2>
+
+
+		<a href="RobertArchibald.pdf"><p>A resume can be downloaded by clicking here.</p></a>
+</section> -->
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
