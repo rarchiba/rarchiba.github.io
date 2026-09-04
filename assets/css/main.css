@@ -2076,7 +2076,7 @@ button,
   display: -ms-flex;
   display: flex;
   border-bottom: solid 5px #6495ED;
-  padding: 6em 0 1em 0;
+  padding: 6em 3em 1em 3em;
   position: relative; }
   #header > * {
     -moz-flex: 1;
@@ -2096,7 +2096,9 @@ button,
       padding-top: 5em; } }
   @media screen and (max-width: 736px) {
     #header {
-      padding-top: 6.5em; }
+      padding-top: 6.5em;
+      padding-left: 1.25em;
+      padding-right: 1.25em; }
       #header .logo {
         font-size: 1.25em;
         margin: 0; }
@@ -2109,7 +2111,7 @@ button,
 
 /* Banner */
 #banner {
-  padding: 6em 0 4em 0 ;
+  padding: 6em 3em 4em 3em ;
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
@@ -2184,6 +2186,10 @@ button,
   @media screen and (orientation: portrait) and (max-width: 480px) {
     #banner .image {
       max-height: 35vh; } }
+  @media screen and (max-width: 736px) {
+    #banner {
+      padding-left: 1.25em;
+      padding-right: 1.25em; } }
 
 /* Footer */
 #footer .copyright {
