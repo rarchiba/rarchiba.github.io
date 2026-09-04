@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+    <header id="header">
+    <a href="index.html" class="logo"><strong>Robert F. Archibald</strong> PhD</a>
+</header>
+<head>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <title>Watching Supermassive Black Holes Shake the Earth with Fermi</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$']],
+                displayMath: [['$$', '$$']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Source Sans Pro', sans-serif; line-height: 1.6; }
+        .container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+        .header { text-align: center; margin-bottom: 3rem; border-bottom: 2px solid #f4f4f4; padding-bottom: 2rem; }
+        .meta { color: #666; font-size: 0.9rem; margin-bottom: 1rem; }
+        .content { font-size: 1.1rem; }
+        .content h1, .content h2, .content h3 { color: #333; margin-top: 2rem; }
+        .content code { background: #f4f4f4; padding: 0.2rem 0.4rem; border-radius: 3px; }
+        .content pre { background: #f8f8f8; padding: 1rem; overflow-x: auto; border-radius: 5px; }
+        .back-link { display: inline-block; margin-top: 2rem; color: #0066cc; text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Watching Supermassive Black Holes Shake the Earth with Fermi</h1>
+            <div class="meta">
+                <span>2026-09-04</span>
+                
+                
+            </div>
+        </header>
+        <article class="content">
+            <p>Gravitational waves are a form of energy emitted when massive things go around each other.
+One of the major sources of these are supermassive blackholes orbiting each other on a timescale of ~a few years.
+The neat thing is these dancing black holes cause you &amp; me and the Earth itself to stretch &amp; squeeze as they dance.</p>
+<p>Throughout my academic career, I always remember the detection of these gravitational waves from supermassive black holes being the mythical <code>five to ten years away</code>.
+That changed in 2023 when <a href="https://iopscience.iop.org/article/10.3847/2041-8213/acdac6"><code>NANOGrav</code> (the North American NanoHertz Observatory for Gravitational Waves) put out a tentative detection.</a></p>
+<p><a href="https://arxiv.org/abs/2204.05226">Using just gamma-ray data alone, the team at NASA's Gamma-ray seeing Fermi Large Area Telescope put out a paper</a> where they were just ~a factor of two or so in sensitivity of being able to see the gravitational waves if they were as bright as NANOGrav sees.</p>
+<p>It has been five more years since Fermi published this limit, and their data is public. Who could resist taking a new look?</p>
+<h2 id="data-processing">Data Processing</h2>
+<p>I downloaded ~18 years of data (the full mission to date) for the Fermi team's listed nine <code>best</code> pulsars.
+For each pulsar I took the Fermi photons from a  3-degree circle around it, and assigned per-photon probabilities the photons were from the pulsar using <code>gtsrcprob</code>.
+After that, I started extending the timing solutions using <a href="https://github.com/coclar/shoogle"><code>Shoogle</code></a> for the most likely photons &amp; extracted three pulse <code>times of arrival</code> per year per pulsar, using a two dimensional phase-energy pulse profile template.</p>
+<p>With these pulse <code>times of arrival</code> in hand, I tried fitting the residuals, that is the pulse <code>times of arrival</code> minus the best fit timing solution jointly to see if we can find some <code>Gravitational Waves</code>.</p>
+<p>If the <code>Gravitational Waves</code> are real &amp; shaking the Earth, the first thing we should be able to see in this data is a <code>Common Underlying Red Noise</code>, a signal that shows up in every pulsar's timing at once, rather than being unique to each one.
+This isn't the smoking gun signal of seeing the predicted correlation pattern of a Hellings-Down curve (the predicted correlation pattern of how strongly two pulsars' timing residuals should agree with each other, based on how far apart they sit in the sky — the actual fingerprint that would prove it's gravitational waves), but it is a promising hint. 
+I used the method described in <a href="https://arxiv.org/abs/2607.06834">Gundersen et al. (2026)</a> to see what I could find. </p>
+<p>To start with, I fixed the spectrum of the noise curve to <code>γ = 13/3</code>, the slope you would expect if this <code>Common Underlying Red Noise</code> really is gravitational waves.
+Here's what the data shows under this assumption: </p>
+<p><span class="image object">
+<img src="Fermi_CURN.png" style="max-width:400px;width:100%" alt="" />
+</span></p>
+<p>For reference, the NANOGrav detection is $A = 2.4^{+0.7}_{-0.6}\times 10^{-15}$.
+For a relatively quick run through of the data, I am pretty pleased that we get this close!<br />
+I remain amazed that <code>5-10 years away</code> has finally come!
+Thanks to the <code>Fermi team</code> for keeping all their data public. Pulling a weak, shared signal out of noisy real-world data is fun! </p>
+<p>NB: This is only a first pass at the data -- take it with a grain of salt.</p>
+        </article>
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
+<script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+</body>
+</html>

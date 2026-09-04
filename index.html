@@ -14,6 +14,51 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<style>
+			.projects {
+				padding: 0 3em 3em 3em;
+			}
+			main.posts {
+				display: block;
+				margin: 0;
+				width: auto;
+			}
+			main.posts .post-card {
+				margin: 0;
+				padding: 1.5em 0;
+				border: 0;
+				border-top: solid 1px rgba(210, 215, 217, 0.75);
+			}
+			main.posts .post-card:first-child {
+				border-top: 0;
+				padding-top: 0.5em;
+			}
+			main.posts .post-card:before,
+			main.posts .post-card:after {
+				content: none;
+			}
+			main.posts .post-title {
+				margin: 0;
+				font-size: 1.25em;
+			}
+			main.posts .post-title a {
+				border-bottom: 0;
+				transition: color 0.2s ease;
+			}
+			main.posts .post-title a:hover {
+				color: #6495ED;
+			}
+			main.posts .post-meta {
+				margin-top: 0.35em;
+				color: #9fa3a6;
+				font-size: 0.8em;
+			}
+			@media screen and (max-width: 736px) {
+				.projects {
+					padding: 0 1.25em 1.25em 1.25em;
+				}
+			}
+		</style>
 	</head>
 <body>
 			<section id="banner">
@@ -39,23 +84,38 @@
 										<img src="images/RFA.jpg", style="max-width:400px;width:100%", alt="" />
 									</span>
 								</section>
+        <div class="projects">
         <header>
             <h2>Projects</h2>
-        </header>    
+        </header>
         <main class="posts">
             
             <article class="post-card">
-                <h3 class="post-title"><a href="grandfather.html">Timing a Grandfather Clock</a></h3>
+                <h3 class="post-title"><a href="fermi_nanograv.html">Watching Supermassive Black Holes Shake the Earth with Fermi</a></h3>
+                
                 <div class="post-meta">
-                    
+                    <span>2026-09-04</span>
                     
                 </div>
+                
+                <!-- 
+                <a href="fermi_nanograv.html" class="read-more">Read More →</a> -->
+            </article>
+            
+            <article class="post-card">
+                <h3 class="post-title"><a href="grandfather.html">Timing a Grandfather Clock</a></h3>
+                
+                <div class="post-meta">
+                    <span>2025-06-07</span>
+                    
+                </div>
+                
                 <!-- 
                 <a href="grandfather.html" class="read-more">Read More →</a> -->
             </article>
             
         </main>
-    </div>
+        </div>
  <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 </body>
 </html>
