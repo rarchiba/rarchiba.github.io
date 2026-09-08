@@ -44,7 +44,7 @@
         <article class="content">
             <p>In 1975, my grandfather built a grandfather clock that has now made its way into my home. Note both the cable sneaking out the bottom of the door going to the raspberry pi, as well as the framed photo of the clock kit shortly after it was bought by my grandfather</p>
 <p><span class="image object">
-    <img src="images/clock.JPG", style="max-width:800px;width:100%", alt="" />
+    <img src="images/clock.JPG", style="max-width:400px;width:100%", alt="" />
 </span></p>
 <p>As is only natural, I decided to use pulsar inspired phase coherent timing in order to tune the clock to the proper frequency. To time the clock, I have an old webcam hooked into a raspberry pi. Every few minutes, the webcam records two seconds of audio, and <code>folds</code> the data at a one second period to get a <code>pulse profile</code>. This <code>pulse profile</code> is convolved with a standard profile made from summing a large number of pulses &amp; I measure a phase difference.</p>
 <p>If you plot these residuals, and error in frequency will show itself as a linear drift -- if the grandfather clock is too slow, each consectutive pulse will be later &amp; later and the phase measurements will drift down the plot (and likewise up for the clock being too fast).</p>
