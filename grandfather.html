@@ -29,6 +29,18 @@
         .content pre { background: #f8f8f8; padding: 1rem; overflow-x: auto; border-radius: 5px; }
         .back-link { display: inline-block; margin-top: 2rem; color: #0066cc; text-decoration: none; }
         .back-link:hover { text-decoration: underline; }
+        #footer {
+            border-top: solid 5px #6495ED;
+            padding-top: 1em;
+        }
+        #footer .copyright li {
+            display: inline;
+        }
+        #footer .copyright li + li {
+            margin-left: 0.75em;
+            padding-left: 0.75em;
+            border-left: solid 1px rgba(159, 163, 166, 0.5);
+        }
     </style>
 </head>
 <body>
@@ -62,6 +74,12 @@
         </article>
         <a href="index.html" class="back-link">← Back to Home</a>
     </div>
+    <footer id="footer">
+        <ul class="copyright">
+            <li><a href="mailto:archibald.rob@gmail.com">Contact Me</a></li>
+            <li><a href="RobertArchibald.pdf">CV</a></li>
+        </ul>
+    </footer>
 <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 </body>
 </html>
